@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python S/W 환경 설정 &mdash; ExaRobot 0.0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="개요" href="abstract.html" />
+    <link rel="prev" title="ROS2 사용 패키지 환경 설정" href="ros.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> ExaRobot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Develop Environment:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../develop_env/env.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop_env/jetson_install1.html">Jetson 시스템 설치 (Jetpack 4.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop_env/jetson_install2.html">Jetson 시스템 설치 (Jetpack 5.0.2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros.html">ROS2 사용 패키지 환경 설정</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Python S/W 환경 설정</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">의존성 패키지 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">환경 구성 및 실행</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#jetson-inference-jetson">Jetson Inference 설치(Jetson 전용)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">ROS2 기반 서비스 로봇 소프트웨어:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="abstract.html">개요</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sw1.html">설계</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sw2.html">ROS2 패키지</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ros_nav2_param.html">Navigation2 파라메터 정보</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../apis.html">Modules</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ExaRobot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Python S/W 환경 설정</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/software/install.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="python-s-w">
+<h1>Python S/W 환경 설정<a class="headerlink" href="#python-s-w" title="Permalink to this heading"></a></h1>
+<div class="section" id="id1">
+<h2>의존성 패키지 설치<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    pip3 install PyQt5
+    pip3 install numpy
+    pip3 install pyserial
+    pip3 install pyttsx3
+    pip3 install opencv-python
+    pip3 install opencv-contrib-python
+    pip3 install psutil
+    pip3 install SpeechRecognition
+        <span class="c1"># 의존성: sudo apt-get install flac</span>
+    pip3 install pyaudio
+    <span class="c1"># 오류 발생시:  sudo apt-get install portaudio19-dev -y</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>환경 구성 및 실행<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>이용하는 장치의 udev rule 를 지정한다.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># robot serial</span>
+    <span class="nb">echo</span>  <span class="s1">&#39;KERNEL==&quot;ttyUSB*&quot;, ATTRS{idVendor}==&quot;0403&quot;, ATTRS{idProduct}==&quot;6015&quot;, MODE:=&quot;0666&quot;, GROUP:=&quot;dialout&quot;,  SYMLINK+=&quot;ttyRobot&quot;&#39;</span> &gt;/etc/udev/rules.d/robot_exa.rules
+    
+    <span class="c1"># lidar serial</span>
+    <span class="nb">echo</span>  <span class="s1">&#39;KERNEL==&quot;ttyUSB*&quot;, ATTRS{idVendor}==&quot;10c4&quot;, ATTRS{idProduct}==&quot;ea60&quot;, MODE:=&quot;0666&quot;, GROUP:=&quot;dialout&quot;,  SYMLINK+=&quot;ttyG6&quot;&#39;</span> &gt;/etc/udev/rules.d/ydlidar_g6.rules
+
+    service udev reload
+    sleep <span class="m">2</span>
+    service udev restart
+</pre></div>
+</div>
+<ul>
+<li><p>미리 제공된 ExaRobotCtrl 파일을 복사하고 실행시킨다.</p>
+<ul>
+<li><p>먼저 ROS 환경이 구성되어야한다.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    $ mkdir ~/robot
+    $ cp -r ExaRobotCtrl ~/robot
+
+    $ <span class="nb">cd</span> ~/robot/ExaRobotCtrl/core.sh
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="jetson-inference-jetson">
+<h2>Jetson Inference 설치(Jetson 전용)<a class="headerlink" href="#jetson-inference-jetson" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>미리 제공된 앱보드 용 ExaRobotUI 의존성 패키지이다.</p></li>
+<li><p>Jetson 기반 플렛폼에서 GPU를 사용한 물체감지, 얼굴감지 등 AI 기술사용시 필요하다.</p></li>
+</ul>
+<p><a class="reference external" href="https://github.com/dusty-nv/jetson-inference">https://github.com/dusty-nv/jetson-inference</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install git cmake libpython3-dev python3-numpy
+$ git clone --recursive https://github.com/dusty-nv/jetson-inference
+$ <span class="nb">cd</span> jetson-inference
+$ mkdir build
+$ <span class="nb">cd</span> build
+$ cmake ../
+
+<span class="c1">#GUI-Select download model</span>
+<span class="c1">#GUI-Select pytortch install </span>
+
+$ make -j<span class="k">$(</span>nproc<span class="k">)</span>
+$ sudo make install
+$ sudo ldconfig
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ros.html" class="btn btn-neutral float-left" title="ROS2 사용 패키지 환경 설정" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="abstract.html" class="btn btn-neutral float-right" title="개요" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, seyeon.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
